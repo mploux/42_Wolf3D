@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 14:10:33 by mploux            #+#    #+#             */
-/*   Updated: 2017/07/27 19:44:34 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 18:24:20 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ typedef struct	s_data
 	t_vec2		cam_rot;
 	int			cam_angle;
 	int			draw_mode;
+	t_vec3		sky_color;
 	t_vec3		colors[5];
 }				t_data;
 

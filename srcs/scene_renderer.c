@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 06:07:02 by mploux            #+#    #+#             */
-/*   Updated: 2017/07/27 23:14:44 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 18:48:09 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ static void		draw_floor_and_ceiling(t_data *data, double x, double y)
 	double	fog;
 	int		side;
 
+	if (y < data->win->h / 2 + 1)
+	{
+		draw_pix(data, x, y, 0);
+		return;
+	}
 	side = y < data->win->h / 2 ? -1 : 1;
 	dist = ((double)data->win->h / (y - data->win->h / 2.0) * side);
 	fog = 255.0 / clamp(dist, 1, 10000);

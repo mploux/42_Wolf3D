@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/04 17:17:17 by mploux            #+#    #+#             */
-/*   Updated: 2017/07/27 19:17:33 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 20:14:44 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ void			manage_inputs(t_data *data, t_input *input)
 		data->cam_angle -= 2;
 	if (input->key[SDL_SCANCODE_RIGHT])
 		data->cam_angle += 2;
+
+	data->cam_angle += data->input->dx * 0.1;
+
 	a = data->cam_angle;
 	d.x += cd.x * sin(DTR(a)) + cd.z * cos(DTR(a));
 	d.z += cd.z * sin(DTR(a)) - cd.x * cos(DTR(a));

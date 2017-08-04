@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 14:12:44 by mploux            #+#    #+#             */
-/*   Updated: 2017/07/27 23:11:27 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 18:58:30 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		create_wolf(t_data *data, const char *name, int width, int height)
 	data->framebuffer = new_bitmap(data, width, height);
 	data->cam_rot = vec2(0, 0);
 	data->cam_angle = 0;
+	data->sky_color = vec3(100, 175, 255);
 	data->colors[0] = vec3(255, 0, 0);
 	data->colors[1] = vec3(0, 255, 0);
 	data->colors[2] = vec3(0, 0, 255);

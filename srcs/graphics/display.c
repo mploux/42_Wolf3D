@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 17:50:10 by mploux            #+#    #+#             */
-/*   Updated: 2017/07/27 19:15:30 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 20:14:15 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	sdl_loop(t_data *data, int (*loop)(t_data *))
 	{
 		while (SDL_PollEvent(&event) != 0)
 			handle_events(data, &event);
+		if (data->input->grabbed)
+			update_mouse(data);
 		loop(data);
 	}
 }

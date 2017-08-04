@@ -6,7 +6,7 @@
 /*   By: mploux <mploux@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 14:27:50 by mploux            #+#    #+#             */
-/*   Updated: 2016/12/22 20:21:19 by mploux           ###   ########.fr       */
+/*   Updated: 2017/08/04 18:36:44 by mploux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ t_vec3			vec3_mul_d(t_vec3 a, double d);
 t_vec3			vec3_mul(t_vec3 a, t_vec3 b);
 t_vec3			vec3_clamp(t_vec3 v, double min, double max);
 t_vec3			vec3_reflect(t_vec3 dir, t_vec3 normal);
+t_vec3			vec3_lerp(t_vec3 a, t_vec3 b, double fog);
 t_vec3			mat4_mul_vec3(t_mat4 a, t_vec3 b);
 t_vec4			vec4(double x, double y, double z, double w);
 t_vec4			vec2_2(t_vec2 a, t_vec2 b);
